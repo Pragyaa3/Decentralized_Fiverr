@@ -5,7 +5,9 @@ function Navbar({ account }) {
     <nav className="navbar">
       <div className="navbar-container">
         <div className="navbar-brand">
-          <div className="logo">D</div>
+          <div className="logo-box">
+            <span className="logo-text">DF</span>
+          </div>
           DeFiverr
         </div>
         <div className="navbar-nav">

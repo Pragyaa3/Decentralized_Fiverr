@@ -6,6 +6,9 @@ import contractABI from "./ServiceMarketplace.json";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import Features from "./components/Features";
+import Footer from "./components/Footer";
+import LandingFooter from "./components/LandingFooter";
+
 
 const CONTRACT_ADDRESS = "0x651Ef3Bc4C9a5c811de2b77C9ff8eE859Af52354";
 const ADMIN_ADDRESS = "0x91ABcC00AE1ba976bDa475153a1c7dAe19ade231";
@@ -16,7 +19,7 @@ function App() {
   const [services, setServices] = useState([]);
   const [serviceDesc, setServiceDesc] = useState("");
   const [amount, setAmount] = useState("");
-  const [userRole, setUserRole] = useState(localStorage.getItem("userRole") || "");
+  const [userRole, setUserRole] = useState("");
   const [loading, setLoading] = useState(false);
   const [applicantsMap, setApplicantsMap] = useState({});
 
@@ -232,6 +235,7 @@ function App() {
         <Navbar account={account} />
         <Hero onChooseRole={chooseRole} />
         <Features />
+        <LandingFooter />
       </div>
     );
   }
@@ -501,7 +505,9 @@ function App() {
             )}
           </section>
         )}
+      
       </div>
+      <Footer />
     </div>
   );
 }
